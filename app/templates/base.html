@@ -5,15 +5,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         {% if title %}
         <title>{{title}}</title>
-        {%{% else %}%}        
+        {% else %}       
         <title>Welcome to the best movie Review website online</title>
-        {%endif%}
+        {% endif %}
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
     </head>
     <body>
-       
+       <!--content block-->
+       {% block content%}
+
+       {% endblock%}
        
     </body>
 </html>
