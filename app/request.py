@@ -1,16 +1,15 @@
-from app import app
 import urllib.request,json
-from .models import movie
+from .models import Movie
 
-Movie = movie.Movie
+# Getting api key
+api_key = None
+# Getting the movie base url
+base_url = None
 
-#getting api key
-api_key = app.config['MOVIE_API_KEY']
-
-
-#getting the movie base url
-base_url = app.config["MOVIE_API_BASE_URL"]
-
+def configure_request(app):
+    global api_key,base_url
+    api_key = app.config['MOVIE_API_KEY']
+    base_url = app.config['MOVIE_API_BASE_URL']
 
 def get_movies(category):
     '''
@@ -34,10 +33,8 @@ def get_movies(category):
 def process_results(movie_list):
     '''
     Function  that processes the movie result and transform them to a list of Objects
-
     Args:
         movie_list: A list of dictionaries that contain movie details
-
     Returns :
         movie_results: A list of movie objects
     '''
@@ -49,7 +46,6 @@ def process_results(movie_list):
         poster = movie_item.get('poster_path')
         vote_average = movie_item.get('vote_average')
         vote_count = movie_item.get('vote_count')
-        # print(movie_item)
 
         if poster:
             movie_object = Movie(id,title,overview,poster,vote_average,vote_count)
