@@ -1,6 +1,6 @@
 # GeekTVMovies
 It is a Flask app that shows various categories of movies , it allows a user to search for movies ,check movies reviews and also add a review
-## By Oliver Maiyo
+## By Chepngetich edah
 
 
 ### Screenshot of Home page
@@ -78,7 +78,7 @@ It is a Flask app that shows various categories of movies , it allows a user to 
 
 > [MIT License](license) this application's source code is free for any open source projects
 
-> Copyright (c) 2022 **Oliver Maiyo**
+> Copyright (c) 2022 **Chepngetich edah**
 
 
 
@@ -87,5 +87,5 @@ It is a Flask app that shows various categories of movies , it allows a user to 
 
 > If you have any questions,comments or advice,feel free to contact me
 
-* [Email](oliverkoechrj@gmail.com)
-* [Twitter]()
+* [Email](cheruiyotedah@gmail.com)
+

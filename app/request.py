@@ -15,7 +15,7 @@ def get_movies(category):
     '''
     Function that gets the json response to our url request
     '''
-    get_movies_url = base_url.format(category,api_key)
+    get_movies_url = base_url.format(category,'af7558bfcab39a9b41be23b9cf270e53')
 
     with urllib.request.urlopen(get_movies_url) as url:
         get_movies_data = url.read()
@@ -54,7 +54,7 @@ def process_results(movie_list):
     return movie_results
 
 def get_movie(id):
-    get_movie_details_url = base_url.format(id,api_key)
+    get_movie_details_url = base_url.format(id,'af7558bfcab39a9b41be23b9cf270e53')
 
     with urllib.request.urlopen(get_movie_details_url) as url:
         movie_details_data = url.read()
@@ -74,7 +74,7 @@ def get_movie(id):
     return movie_object
 
 def search_movie(movie_name):
-    search_movie_url = 'https://api.themoviedb.org/3/search/movie?api_key={}&query={}'.format(api_key,movie_name)
+    search_movie_url = 'https://api.themoviedb.org/3/search/movie?api_key={}&query={}'.format('af7558bfcab39a9b41be23b9cf270e53',movie_name)
     with urllib.request.urlopen(search_movie_url) as url:
         search_movie_data = url.read()
         search_movie_response = json.loads(search_movie_data)
